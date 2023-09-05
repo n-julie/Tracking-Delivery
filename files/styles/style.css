@@ -1,0 +1,32 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+} 
+body{
+   font-family: sans-serif;
+   background-color: aquamarine;
+   flex: auto;
+}
+.mx-wd{
+   max-width: 1300px;
+}
+.auto{
+   margin: 0 auto;
+}
+.logo{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   /* justify-content: center; */
+   overflow: hidden;
+}
+.logo img{
+   max-width: 130%;
+   min-height: 120%;
+}
+.d-flex{
+   display: flex;
+   align-items: center;
+}
