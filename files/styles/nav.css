@@ -1,0 +1,20 @@
+.nav{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.nav a{
+  text-decoration: none;
+  color: #333;
+  padding: 4px 8px;
+  font-size: 20px;
+}
+.nav a:nth-child(2):hover{
+  margin-left: 3px;
+}
+.nav a:hover{
+  background-color: aliceblue;
+}
+.nav a.active{
+  background-color: aliceblue;
+}
