@@ -6,7 +6,7 @@
     <title>Tracking Delivery</title>
     <style>
         <?php
-        $style = glob("./files/styles/*.css");
+        $style = glob("./styles/*.css");
         foreach ($style as $css) require $css;
         ?>
     </style>
