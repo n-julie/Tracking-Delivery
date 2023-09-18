@@ -31,7 +31,7 @@ include_once "login.inc.php";
           <a href="">Forgot password?</a>
         </div>
         <div class="btn">
-            <span class="icon"><?php require "svgs/arrow-right.svg"?></span>
+          <span class="icon"><?php require "svgs/arrow-right.svg"?></span>
           <input type="submit" name="login">
         </div>
       </form>

@@ -2,11 +2,12 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   transition: 0.3s all;
 } 
 body{
    font-family: sans-serif;
    background-color: #d8d8d8;
-   flex: auto;
+   overflow: hidden;
 }
 .mx-wd{
    max-width: 1300px;
@@ -35,4 +36,7 @@ body{
 }
 .border-b{
    border-bottom: 1px solid #c5c5c5;
+}
+.m-b{
+   margin: 60px 0;
 }
