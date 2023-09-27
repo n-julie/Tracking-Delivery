@@ -75,6 +75,7 @@ a.active{
 .links{
   display: flex;
   align-items: center;
+  /* background-color: #6868f8; */
 }
 .icons-flex{
   display: flex;

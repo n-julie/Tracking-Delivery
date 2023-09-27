@@ -5,7 +5,7 @@ include "./includes/addProduct.inc.php";
 ?>
 <div class="scroll-y">
   <div class="p-container">
-    <div class="p-container">
+    <!-- <div class="p-container"> -->
     <div class="wd-40">
       <div>
         <form method="post" enctype="multipart/form-data">
@@ -92,7 +92,7 @@ include "./includes/addProduct.inc.php";
         </div>
       </div>
     </div>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 <script>

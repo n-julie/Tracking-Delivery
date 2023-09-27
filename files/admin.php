@@ -17,10 +17,10 @@
       </div>
       <div class="admin-links">
         <div class="links">
-        <p class="icons-flex">
-          <span class="ics-flex"><?php include "./svgs/cube.svg" ?></span>
-        </p>
-          <a href="?ref=dashboard&nav=addProduct" class="<?php if($nav == 'addProduct') echo "active" ?>">Add new products</a>
+          <p class="icons-flex">
+            <span class="ics-flex"><?php include "./svgs/cube.svg" ?></span>
+          </p>
+            <a href="?ref=dashboard&nav=addProduct" class="<?php if($nav == 'addProduct') echo "active" ?>">Add new products</a>
         </div>
         <div class="links">
           <p class="icons-flex">

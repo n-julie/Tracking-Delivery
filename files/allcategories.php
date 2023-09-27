@@ -31,13 +31,13 @@
             </thead>
             <tbody>
               <?php
-              $stmt = $conn->query("SELECT * FROM products order by id") or die($conn->error);
+              $stmt = $conn->query("SELECT p.id, p.productName, sum(p.qty) as stock FROM products as p") or die($conn->error);
               while($row=$stmt->fetch_assoc()){
               ?>
               <tr>
                 <td><?=$row['id']?></td>
                 <td><?=$row['productName']?></td>
-                <td></td>
+                <td><?=$row['stock'] == '' ? 0 : $row['stock']?></td>
               </tr>
               <?php }
               ?>
@@ -57,7 +57,7 @@
       ?>
       <div class="countProducts">
         <span>All products:</span>
-        <span><?=$finalData['total']?></span>
+        <span><?=intval($finalData['total'])?></span>
       </div>
     </div>
   </div>

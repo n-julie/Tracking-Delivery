@@ -20,6 +20,7 @@
   padding-right: 25px;
   border: 1px solid #e7e7e7;
   display: flex;
+  margin: 0 3%;
   flex-direction: column;
 }
 .profile{
@@ -63,6 +64,9 @@ select{
   padding: 8px;
   border-radius: 50px;
   margin-top: 20px;
+}
+.cart-ic{
+  width: 50px;
 }
 .button-p{
   color: #212121;
