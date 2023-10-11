@@ -4,7 +4,7 @@ searchBtn.addEventListener('input', () =>{
 
   console.log(searchValue);
   const storeItems = document.querySelector('.js-container');
-  const products = storeItems.querySelector('.js-product');
+  const products = storeItems.querySelectorAll('.js-product');
 
   for(let i = 0; i < products.length; i++) {
     const productName = products[i].querySelector('.js-productName');
