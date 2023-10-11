@@ -7,7 +7,7 @@
           <h2>Find products:</h2>
           <form action="" method="post">
             <div class="search-box">
-              <input type="text" placeholder="search products....">
+              <input type="text" class="js-search-btn" placeholder="search products....">
             </div>
             <div class="search-box">
               <div class="btn">
@@ -31,7 +31,7 @@
             </thead>
             <tbody>
               <?php
-              $stmt = $conn->query("SELECT p.id, p.productName, sum(p.qty) as stock FROM products as p") or die($conn->error);
+              $stmt = $conn->query("SELECT id, productName, sum(qty) as stock FROM products") or die($conn->error);
               while($row=$stmt->fetch_assoc()){
               ?>
               <tr>

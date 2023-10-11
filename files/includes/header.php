@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tracking Delivery</title>
 <title>Shopping Cart</title>
-<link rel="stylesheet" href="./index.css"><script src="https://kit.fontawesome.com/c98faec581.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="./index.css"><script src="https://kit.fontawesome.com/c98faec581.js" crossorigin="anonymous"></script> -->
 <style>
     <?php
     $style = glob("./styles/*.css");

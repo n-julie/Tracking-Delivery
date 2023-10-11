@@ -10,7 +10,7 @@
   padding: 30px 0;
   width: 100%;
 }
-.wd{
+ .wd{
   width: 25%;
 }
 .hgt{
@@ -62,6 +62,7 @@ select{
   width: 100%;
   text-align: center;
   padding: 8px;
+  
   border-radius: 50px;
   margin-top: 20px;
 }
@@ -99,5 +100,20 @@ select{
 }
 .search-box .btn:hover{
   transform: scale(1.1);
+}
+@media screen and (max-width:700px){
+  .wd{
+    width: 33.33%;
+  }
+}
+@media screen and (max-width:450px){
+  .wd{
+    width: 50%;
+  }
+}
+@media screen and (max-width:380px){
+  .wd{
+    width: 100%;
+  }
 }
 

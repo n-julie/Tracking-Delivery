@@ -1,0 +1,99 @@
+.check-container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.check-container div{
+  width: 100%;
+}
+.check-container form{
+  /* background-color: #3d46e6; */
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin: 0 5px;
+  width: 100%;
+
+}
+.check-container form .ctrl{
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 5px; */
+  width: 50%;
+}
+.text-area ::placeholder{
+  color: #c4c4c4;
+}
+.ctrl-f{
+  display: flex;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+.ctrl input{
+  width: 100%;
+  background-color: #eaebfd;
+  font-size: 15px;
+  padding: 8px 4px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.input-p{
+  padding: 0 5px;
+}
+.text-area{
+  width: 100%;
+}
+.text-area textarea{
+  resize: none;
+  width: 100%;
+  
+}
+.payable-header{
+  background-color: #8ca7ff;
+  padding: 10px 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+.payable{
+  margin: 10px 0;
+}
+.select{
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+}
+.select select{
+  width: 100%;
+}
+.select p{
+  margin-bottom: 5px;
+}
+.place{
+  width: 100%;
+  text-align: center;
+}
+.place input{
+  width: 50%;
+  padding: 8px 4px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-size: bold;
+  cursor: pointer;
+  background:linear-gradient(to right, #3d64e6,#2ffdfd);
+}
+.place input:hover{
+  transform: scale(1.03);
+}
+
+@media screen and (max-width:530px){
+  .check-container form .ctrl{
+    width: 100%;
+  }
+  .input-p{
+    padding: 0;
+  }
+}

@@ -1,2 +1,2 @@
 <?php
-header('location: ..?nav=login');
+header('location: ..?ref2=login');

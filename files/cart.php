@@ -22,20 +22,14 @@ require_once "components.php";
                 if(isset($_GET['action'])){
                   $action= $_GET['action'];
                   if($action){
-                    foreach($_SESSION['cart'] as $key => $value){
-                      if($value['productId'] == $_GET['id']) {
-                        unset($_SESSION['cart'][$key]);
-                        echo "<script>alert('Product has been removed');</script>";
-                        echo "<script>windows.location.href='?ref=dashboard&nav=cart';</script>";
-                      }
-                    }
+                    unset($_SESSION['cart']);
                   }
                 }
               }
             }
           }
         } else {
-          echo "<h5>Cart is empty..!!!</h5>";
+          echo "<h5 style=\"color:red; font-size: 16px;\">Cart is empty..!!!</h5>";
         }
         ?>
       </div>
@@ -51,8 +45,8 @@ require_once "components.php";
               $count = count($_SESSION['cart']);
               ?>
               <div class="details-flex">
-                <span>Items(<?=$count?>):</span>
-                <span>ush.<?=$total?></span>
+                <span>Items(<?=intval($count)?>):</span>
+                <span>UGX.<?=intval($total)?></span>
 
               </div>
               <?php
@@ -67,12 +61,14 @@ require_once "components.php";
                   </div>
                   <div class="details-flex c-tomato">
                     <span>Order total:</span>
-                    <span>ush.<?=$total?></span>
+                    <span>UGX.<?=$total?></span>
 
                   </div>
               </div>
               <div class="place-order">
-                <input type="submit" value="Place your order">
+                <a href="?ref2=checkout">
+                  <p>Checkout</p>
+                </a>
               </div>
             </div>
           </form>

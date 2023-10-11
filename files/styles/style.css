@@ -32,7 +32,18 @@ body{
    position: sticky;
    top: 0;
    display: flex;
+   /* justify-content: space-between; */
    align-items: center;
+}
+.d-flex > div:first-child{
+   width: 10%
+}
+.d-flex > div:nth-of-type(2){
+   width: 70%;
+}
+.d-flex > div:nth-last-of-type(){
+   width: 20%;
+   background-color: red;
 }
 .border-b{
    border-bottom: 1px solid #c5c5c5;
@@ -40,3 +51,4 @@ body{
 .m-b{
    margin: 60px 0;
 }
+

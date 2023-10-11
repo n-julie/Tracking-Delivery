@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])){
           $_SESSION['user'] = $verify;
           ?>
           <script>
-            window.location.href = "?ref=admin";
+            window.location.href = "?ref=c-panel";
           </script>
           <?php
         }else{

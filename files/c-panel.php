@@ -1,10 +1,11 @@
+<?php $select = 'allcategories'; ?>
 <div class="flex-container">
   <div class="left navToggle">
     <div style="width: 100%;">
       <div class="flex-start">
         <div class="logo_flex">
           <div class="admin_logo">
-            <img src="./files/img/log.jpg" alt="">
+            <img src="./files/i_2mg/log.jpg" alt="">
           </div>
           <div style="margin-right: auto;">
             <h1><?=$_SESSION['user']['username']?></h1>
@@ -20,38 +21,44 @@
           <p class="icons-flex">
             <span class="ics-flex"><?php include "./svgs/cube.svg" ?></span>
           </p>
-            <a href="?ref=dashboard&nav=addProduct" class="<?php if($nav == 'addProduct') echo "active" ?>">Add new products</a>
+            <a href="?ref=c-panel&nav_3=addProduct">Add new products</a>
         </div>
         <div class="links">
           <p class="icons-flex">
             <span class="ics-flex"><?php include "./svgs/list-ul.svg";?></span>
           </p>
-          <a href="?ref=dashboard&nav=allcategories" class="<?php if($nav == 'allcategories') echo "active" ?>">Categories</a>
+          <a href="?ref=c-panel&nav_3=allcategories">Categories</a>
         </div>
         <div class="links">
           <p class="icons-flex">
             <span class="ics-flex"><?php include "./svgs/calendar.svg";?></span>
           </p>
-          <a href="?ref=dashboard&nav=sales.php">Sales</a>
+          <a href="?ref=c-panel&nav_3=sales">Sales</a>
         </div>
         <div class="links">
           <p class="icons-flex">
             <span class="ics-flex"><?php include "./svgs/user.svg" ?></span>
           </p>
-          <a href="?ref=dashboard&nav=users">Users</a>
+          <a href="?ref=c-panel&nav_3=users">Users</a>
+        </div>
+        <div class="links">
+          <p class="icons-flex">
+            <span class="ics-flex cart-color"><?php include "./svgs/cart.svg" ?></span>
+          </p>
+          <a href="">Check orders</a>
         </div>
         <div class="links">
           <p class="icons-flex">
             <span class="ics-flex"><?php include "./svgs/gear.svg"?></span>
           </p>
-          <a href="">Settings</a>
+          <a href="?ref=c-panel&nav_3=settings">Settings</a>
         </div>
       </div>
     </div>
   </div>
 
     <p class="icons-flex hide">
-      <span class="ics-flex" onclick="openNav();"><?php include "./svgs/bars.svg" ?></span>
+      <span class="ics-flex js-nav-btn"><?php include "./svgs/bars.svg" ?></span>
     </p>
   
   <div class="right">
@@ -60,17 +67,10 @@
     </div>
     <div>
       <?php
-      $nav='addProduct';
-      if(isset($_GET['nav'])) $nav= $_GET['nav'] . ".php";
-      if(file_exists($nav)) require $nav;
+      $nav3 =isset($_GET['nav_3']) ? $_GET['nav_3'] : "addProduct" ;
+      $page2 = "./".$nav3 .".php";
+      if(file_exists($page2)) require $page2;
       ?>
     </div>
   </div>
 </div>
-<script>
-  function openNav(){
-    nav = document.querySelector('.navToggle');
-    if(nav.style.display === "flex") nav.style.display = "none";
-    else nav.style.display = "flex";
-  }
-</script>
