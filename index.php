@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 if(isset($_GET['logout'])){
   session_destroy();
   unset($_SESSION['user']);
-  header('location: ./?ref=dashboard');
+  header('location: ?nav3=categories');
 }
 chdir('files');
 
@@ -16,7 +16,7 @@ foreach (glob("./files/svgs/*.svg") as $vectors){
   $svg[$ph['filename']] = file_get_contents($vectors);
 }
 
-$file = isset($_SESSION['user']) ? 'admin' : "dashboard";
+$file = isset($_SESSION['user']) ? 'c-panel' : "dashboard";
 
 require "./includes/header.php";
 require "./$file.php";
