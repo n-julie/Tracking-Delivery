@@ -29,5 +29,9 @@
   }
   .hide2{
     display: flex;
+    cursor: pointer;
+  }
+   .fa-times{
+    transform: rotate(180deg);
   }
 }

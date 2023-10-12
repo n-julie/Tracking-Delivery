@@ -55,12 +55,13 @@
         </div>
       </div>
     </div>
-  </div>
-
-    <p class="icons-flex hide">
-      <span class="ics-flex js-nav-btn"><?php include "./svgs/bars.svg" ?></span>
+  </div class="icons-position ic-left">
+    <p class="icons-flex hide p-abso">
+      <span class="ics-flex hide js-nav-btn"><?php include "./svgs/bars.svg" ?></span>
     </p>
-  
+    <p class="icons-flex p-abso x js-close">
+      <span class="ics-flex"><?php include "./svgs/xmark.svg" ?></span>
+    </p>
   <div class="right">
     <div class="watermark">
       <img src="./files/img/log.jpg" alt="">

@@ -19,8 +19,8 @@ require_once "components.php";
                 cartElement($row['productName'],$row['productPrice'],$row['productDesc'],$row['productImage'],$row['id']);
                 $total += intval($row['productPrice']);
 
-                if(isset($_GET['action'])){
-                  $action= $_GET['action'];
+                if(isset($_GET['actionId'])){
+                  $action= $_GET['actionId'];
                   if($action){
                     unset($_SESSION['cart']);
                   }

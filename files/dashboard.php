@@ -37,9 +37,12 @@
               </div>
             </a>
           </div>
-          <div>
-            <p class="icons-flex hide2 p-right">
+          <div class="icons-position">
+            <p class="icons-flex hide2 p-right p-abso">
               <span class="ics-flex js-nav-btn"><?php include "./svgs/bars.svg" ?></span>
+            </p>
+            <p class="icons-flex p-right p-abso x js-close">
+              <span class="ics-flex"><?php include "./svgs/xmark.svg" ?></span>
             </p>
           </div>
         </div>

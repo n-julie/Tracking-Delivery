@@ -1,4 +1,8 @@
-<?php include "./includes/db.inc.php"; ?>
+<?php 
+include "./includes/db.inc.php";
+require_once "components.php"; 
+?>
+
 <?php 
 if(isset($_POST['add'])){
   if(isset($_SESSION['cart'])){
@@ -41,43 +45,9 @@ if(isset($_POST['add'])){
         <?php
         $productSql = "SELECT * FROM products order by id asc";
         $productSql = mysqli_query($conn,$productSql) or die($conn->error);
-        while($row = $productSql->fetch_assoc()){ ?>
-          <div class="wd js-product">
-            <div class="hgt">
-              <form action="" method="post">
-                <a href="" style="color:unset; text-decoration:none;" >
-                  <div class="profile">
-                    <img src="./files/uploads/<?=$row['productImage']?>" alt="">
-                  </div>
-                </a>
-                <div class="p-name js-productName"><?=$row['productName']?></div>
-                <div class="price">UGX.<?=$row['productPrice']?></div>
-                <div class="product-qty">
-                  <select name="" id="">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <input type="hidden" name="productId" value="<?=$row['id']?>">
-                <button type="submit" name="add" class="add-to-cart button-p">
-                  <div class="links">
-                    <div class="icons-flex" style="font-size: 15px; display:flex;align-items:center; margin:0 auto;">
-                      Add to cart
-                      <span class="ics-flex"><?php include "./svgs/cart.svg" ?></span>
-                    </div>
-                  </div>
-                </button>
-              </form>
-            </div>
-          </div>
+        while($row = $productSql->fetch_assoc()){
+          categories($row['productImage'],$row['productName'],$row['productPrice'],$row['id']);
+          ?>
         <?php }
         ?>
       </div>
