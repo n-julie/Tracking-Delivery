@@ -1,0 +1,133 @@
+.logo_flex{
+  display: flex;
+  flex-direction: column;
+}
+.admin_logo{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.admin_logo img{
+  max-width: 130%;
+  min-height: 100%;
+}
+.flex-start{
+  margin: 10px 0; 
+  padding: 0 5px; 
+  display:flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content:space-between;
+}
+.admin-links{
+  margin-top: 20px;
+
+}
+.flex-container{
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.flex-container .left{
+  width: 20%;
+  color: #333;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.admin-links > div{
+  width: 100%;
+  margin: 5px 0;
+  padding: 4px 5px;
+}
+.admin-links div a{
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+}
+a.active{
+  background-color: gray;
+  color: #fff;
+
+}
+.flex-container .right{
+  width: 80%;
+  height: 100vh;
+  background-color: #fff;
+}
+.flex-container .right::-webkit-scrollbar {
+  width: 8px;
+  background: #e6e6e6;
+}
+.flex-container .right::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #6868f8;
+  border-radius: 15px;
+}
+
+.flex-container .right::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #99fafa;
+}
+.links{
+  display: flex;
+  align-items: center;
+  /* background-color: #6868f8; */
+}
+.icons-flex{
+  display: flex;
+  margin-right: 3px;
+}
+.ics-flex{
+  width: 20px;
+}
+.ics-small{
+  width: 15px;
+
+}
+.ics-small:hover{
+  transform: scale(1.1);
+}
+.green{
+  fill: green;
+}
+.red{
+  fill: tomato;
+}
+.hide{
+  position: absolute;
+  /* left: 3px; */
+  top: 0;
+  display: none;
+}
+.hide2{
+  display: none;
+}
+.p-right{
+  right: 3px;
+  top: 35px;
+}
+.cart-color{
+  fill: orangered;
+}
+@media screen and (max-width:700px){
+  .flex-container .left{
+    display: none;
+    position: absolute;
+    top: 23px;
+    width: 50%;
+    background-color: #f0f0f0;
+    z-index: 999999;
+    transition: 0.3s all;
+  }
+  .flex-container .right{
+    width: 100%;
+  }
+  .hide{
+    display: flex;
+    /* width: 100%; */
+  }
+}

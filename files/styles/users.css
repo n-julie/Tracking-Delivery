@@ -1,0 +1,70 @@
+.users-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% auto auto 10%;
+  padding: 10px 0;
+  
+}
+.users-container .userTable{
+  width: 70%;
+
+}
+.userTable table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.users-container .add_newuser{
+  width: 70%;
+}
+.userTable table tbody{
+  background-color: ghostwhite;
+}
+.add_newuser form{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+}
+.userinput{
+  display: flex;
+}
+.add_newuser form .userinput input{
+  width: 50%;
+  padding: 10px 4px;
+  border-radius: 5px;
+  margin: 5px 2px;
+  outline: none;
+}
+.btn-center{
+  margin: 0 auto;
+}
+/* .pwd-wd-50{
+  width: 50%;
+} */
+.m-r{
+  margin-right: 3px;
+}
+@media screen and (max-width: 500px){
+  .users-container{
+    width: 100%;
+  }
+  .userinput{
+    flex-direction: column;
+  }
+  .add_newuser form .userinput input{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px){
+  .users-container .userTable{
+    width: 100%;
+  
+  }
+  .users-container .add_newuser{
+    width: 100%;
+  }
+
+}
