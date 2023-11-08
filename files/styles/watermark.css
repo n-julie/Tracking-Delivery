@@ -1,0 +1,16 @@
+.watermark{
+  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 30%;
+  left: 50%;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.watermark img{
+  max-width: 130%;
+  min-height: 120%;
+}
