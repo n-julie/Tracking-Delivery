@@ -1,0 +1,13 @@
+.wd100{
+  width: 100%;
+}
+.wd100 > div{
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+.t-header{
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+  padding: 7px 0;
+  border: 1px solid #e2e2e2;
+}

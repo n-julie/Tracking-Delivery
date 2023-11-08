@@ -9,7 +9,7 @@
 }
 .search input{
   border-radius: 5px 0 0 5px;
-  width: 50%;
+  width: 100%;
   border: none;
   outline: none;
   padding: 10px 20px;
@@ -21,4 +21,10 @@
 }
 .search-icon{
   fill: tomato;
+}
+.nodata{
+  display: none;
+}
+.nodata-found{
+  display: flex;
 }

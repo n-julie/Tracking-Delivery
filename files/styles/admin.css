@@ -39,19 +39,19 @@
   background-color: #f0f0f0;
 }
 
-.admin-links > div{
-  width: 100%;
+
+.admin-links > a{
   margin: 5px 0;
-  padding: 4px 5px;
-}
-.admin-links div a{
   text-decoration: none;
   color: #333;
   font-size: 17px;
+  padding: 5px;
+  max-width: 100%;
+  display: flex;
 }
 a.active{
-  background-color: gray;
-  color: #fff;
+  background-color: #006eff;
+  color: #fff !important;
 
 }
 .flex-container .right{
@@ -88,11 +88,12 @@ a.active{
 }
 .p-abso{
   position: absolute;
-  top: -20px;
+  top: -27px;
 }
 .x{
   display: none;
   cursor: pointer;
+  position: absolute;
 }
 .x > span{
   fill: #3b3b3b;

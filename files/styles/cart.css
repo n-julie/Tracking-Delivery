@@ -1,3 +1,6 @@
+.cart-container{
+  margin-bottom: 4%;
+}
 .cart-container > div{
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +9,7 @@
 .cart-title{
   margin-bottom: 17px;
   margin-left: 14px;
+
 }
 .wd70{
   width: 65%;
@@ -30,7 +34,8 @@
   margin-right: 10px;
   border-radius: 8px;
   margin-bottom: 2%;
-  display: flex; flex-direction: column;
+  display: flex; 
+  /* flex-direction: column; */
   padding: 25px;
 }
 .c-tomato{
@@ -52,7 +57,7 @@
 }
 .cname{
   padding-top: 24px;
-  margin-left: 8px;
+  /* margin-left: 8px; */
 }
 .cname h5{
   font-size: 17px;
@@ -113,16 +118,16 @@
   padding: 15px 0;
 }
 .d_flex{
-  width: 70%;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-.d_optn{
-  width: 30%;
+.f-flex{
+  width: 50%;
 }
-.h-border:hover{
-  border: 1px solid #333;
-  border-radius: 2px;
+.cname{
+  width: 50%;
 }
 small{
   width: 50px;
@@ -145,6 +150,9 @@ small{
   font-size: 17px;
   outline: none;
   border-radius: 8px;
+}
+.disabled a p{
+  background-color: #e7d472;
 }
 .updatebtn{
   padding: 4px 10px;
@@ -196,17 +204,28 @@ small{
     margin: 2% auto;
   }
 }
+@media screen and (max-width:770px){
+  .wd50 > form{
+    max-width: 100%;
+    margin: 2% 10px;
+  }
+  .price-details{
+    max-width: 100%;
+    margin: 0 10px;
+  }
+}
 @media screen and (max-width:500px){
   .cart-title{
     width: 90%;
     margin: 17px auto;
   }
-  .price-details{
-    max-width: 90%;
-    margin: 0 auto;
+}
+@media screen and (max-width:495px){
+  .cart-flex > .d_flex,.cname{
+    width: 100%;
   }
-  .wd50 form{
-    max-width: 90%;
-    margin: 2% auto;
+  .cart-flex{
+    align-items: center;
+    justify-content: center;
   }
 }

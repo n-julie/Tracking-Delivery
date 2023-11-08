@@ -1,56 +1,46 @@
-<?php 
-include "./includes/db.inc.php";
-require_once "components.php"; 
-?>
-
-<?php 
-if(isset($_POST['add'])){
-  if(isset($_SESSION['cart'])){
-
-    $item_array_id = array_column($_SESSION['cart'], "productId");
-    // print_r($item_array_id);
-
-    $matchData = in_array($_POST['productId'],$item_array_id);
-    if($matchData){
-      echo "<script>alert('Product is already added in the cart..!')</script>";
-      echo "<script>windows.location.href='?refdashbord&nav=categories';</script>";
-      
-    }else{
-
-      $count=count($_SESSION['cart']);
-      $item_array = array(
-        'productId' => $_POST['productId']
-      );
-      $_SESSION['cart'][$count] = $item_array;
-      // print_r($_SESSION['cart']);
-    }
-  }else {
-    $item_array = array(
-      'productId' => $_POST['productId']
-    );
-
-    //create new session variable
-    $_SESSION['cart'][0]= $item_array;
-    // print_r($_SESSION['cart']);
-  }
-}
-?>
-<div class="mx-wd auto">
-  <div class="product-container">
-    <div class="right">
-      <div class="header">
-        <h2>Welcome to Express Delivery</h2>
+<?php
+// require_once "components.php";
+if(isset($_GET['category'])){
+  $category = $_GET['category'];
+  $tittle_data= getNameActive('categories',$category);
+  $tittle=$tittle_data->fetch_assoc();
+  if($tittle){
+    $cId = $tittle['id'];
+    ?>
+    <div class="mx-wd auto">
+      <div class="tittle">
+        <h1><?=$tittle['name'] ?></h1>
+        <div class="underlined"></div>
       </div>
-      <div class="display-flex js-container">
+      <div class="display-flex">
         <?php
-        $productSql = "SELECT * FROM products order by id asc";
-        $productSql = mysqli_query($conn,$productSql) or die($conn->error);
-        while($row = $productSql->fetch_assoc()){
-          categories($row['productImage'],$row['productName'],$row['productPrice'],$row['id']);
-          ?>
+        $product = getProductByCategory($cId);
+        if(mysqli_num_rows($product) > 0){
+          foreach( $product as $item){
+            ?>
+            <div class="c-wd">
+              <div class="hgt">
+                <a href="?ref2=view-product&on_id=<?=$item['id']?>" style="text-decoration:none;color:unset;">
+                  <div class="profile">
+                    <img src="./files/uploads/<?=$item['productImage']?>" alt="">
+                  </div>
+                  <div class="cname">
+                  <?=$item['productName']?>
+                  </div>
+                </a>
+              </div>
+            </div>
         <?php }
+        }else{
+          echo "No data found!";
+        }
         ?>
       </div>
     </div>
-  </div>
-</div>
+  <?php
+  }else {
+    echo "Something went wrong!";
+  }
+} else {
+  echo "Something went wrong!";
+} ?>

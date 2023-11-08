@@ -43,3 +43,26 @@ openNav.addEventListener('click', () => {
   });
   // openNav.classList.toggle('fa-times');
 });
+
+//dropDown
+let profileBtn = document.querySelector('.js-profileBtn');
+let dropdown =document.querySelector('.js-dropdown');
+profileBtn.addEventListener('click',(e) => {
+  e.preventDefault();
+  if(dropdown.classList.contains('show')){
+    dropdown.classList.remove('show');
+  }else {
+    dropdown.classList.add('show');
+  }
+});
+
+
+// let active = document.querySelector('.nav > a');
+// active.addEventListener('click',(e)=>{
+// e.preventDefault();
+// if(active.classList.contains('active')){
+//   active.classList.remove('active');
+// }else{
+//   active.classList.add('active');
+// }
+// });
