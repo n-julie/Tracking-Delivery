@@ -14,6 +14,12 @@ searchBtn.addEventListener('input', () =>{
       products[i].style.display = "block";
     } else {
       products[i].style.display = "none";
+      const nodata = document.querySelector('.nodata').value;
+      // if(products[i].style.display = "none"){
+      //   nodata.classList.add('nodata-found');
+      // }else{
+      //   nodata.classList.remove('nodata-found');
+      // }
     }
   }
 });

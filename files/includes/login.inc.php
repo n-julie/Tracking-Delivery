@@ -1,5 +1,5 @@
 <?php
-include "includes/db.inc.php";
+// include "includes/db.inc.php";
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])){
   if(strlen($_POST['email']) < 1) $error[] = "Email is required";
   else if(strlen($_POST['password']) < 1) $error[] = "Password is required";
@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['login'])){
       $error[]= "Please insert valid email!";
     }else{
       $sql = "SELECT * FROM `admin` WHERE email ='$email'";
-      $query = mysqli_query($conn,$sql) or die($conn->error);
+      $query = mysqli_query($db,$sql) or die($db->error);
       if(mysqli_num_rows($query) == 0){
         $error[]= "email is not exist";
       }else{
