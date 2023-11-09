@@ -1,0 +1,102 @@
+.card-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 5px;
+}
+.card{
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 5px;
+}
+.card-flex > div{
+  width: 50%;
+}
+.card-flex > div > div{
+  margin: 5px;
+}
+.card-flex div > h2{
+  border-bottom: 1px solid gray;
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 20px 5px;
+  font-size: 26px;
+  font-weight: 600;
+  background-color: #ff4800;
+  border-radius: 8px 8px 0 0;
+}
+.card-header  a{
+  text-decoration: none;
+  color: #333;
+  background-color: #47ceff;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.card-header2 a{
+  background-color: transparent;
+  color: #fff !important;
+}
+.card-header2 a:hover{
+  background-color: #47ceff;
+}
+.card-header a:hover{
+  transform: scale(1.010);
+}
+.card-header span{
+  color: #fff;
+}
+
+.col-md{
+  display: flex;
+  flex-direction: column;
+}
+.col-md label{
+  font-size: 17px;
+  font-weight: bold;
+}
+.border{
+  border: 1px solid #e4e4e4;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.order-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+.order-table th{
+  border:none;
+  padding: 12px 4px;
+  border-bottom: 2px solid #a8a8a8;
+}
+.order-table td{
+  border: none;
+  border-bottom: 1px solid #ebebeb;
+}
+.data-center{
+  display: flex;
+  align-items: center;
+}
+.col div > h4{
+  padding: 10px 0;
+}
+.col div > h4 > span{
+  float: right;
+  color: green;
+}
+.orderbtn{
+  padding: 8px 4px;
+  margin-top: 4px;
+  border-radius: 5px;
+  background-color: #ff4800;
+  font-weight: bolder;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+}

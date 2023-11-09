@@ -45,7 +45,7 @@
         </thead>
         <?php
         include "./includes/db.inc.php";
-        $selectUsers = $conn->query("SELECT * FROM admin") or die($conn->error);
+        $selectUsers = $db->query("SELECT * FROM admin") or die($db->error);
         ?>
         <tbody>
           <?php

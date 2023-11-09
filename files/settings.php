@@ -2,10 +2,10 @@
 <div class="mx-wd auto">
   <div>
     <div>
-      <?=$_SESSION['user']['username']?>
-      <div>
-        <?=$_SESSION['user']['email']?>
-      </div>
+      <marquee behavior="" direction="left">
+      <h2 style="text-align: center; color:tomato">No data yet!!!!! COMING SOON............</h2>
+      </marquee>
+    </div>
     </div>
   </div>
 </div>

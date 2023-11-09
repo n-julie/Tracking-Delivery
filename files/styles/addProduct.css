@@ -5,7 +5,9 @@
   flex-wrap: wrap;
 }
 .p-container .wd-40{
-  width: 40%;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5%;
 }
 .p-container .wd-60{
   width: 60%;
@@ -22,13 +24,15 @@
   border-radius: 10px;
   background-color: aliceblue;
 }
-.p-container form .input-controller{
+.input-controller{
   margin: 5px 0;
+  width: 50%;
+  padding-right: 4px;
 }
-.p-container form input,textarea{
+.p-container form input,textarea,select{
   width: 100%;
   padding: 10px 4px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
   color: #fff;
   font-size: 17px;
   border-radius: 5px;
@@ -36,9 +40,14 @@
   border: none;
   background-color: dimgrey;
 }
-.p-container .btn{
+.cBtn{
+  max-width: 100%;
+
+}
+.cBtn .btn{
   background-color: cornflowerblue !important;
   display: flex;
+  width: 50%;
   justify-content: center;
   margin: 0 auto !important;
   align-items: center;
@@ -46,6 +55,7 @@
   font-size: 20px !important;
   cursor: pointer;
 }
+
 .p-container .btn:hover{
   background-color: #3179fd !important;
 }
@@ -61,11 +71,44 @@ th,td{
 .p-container  th:nth-child(even), .p-container td:nth-child(even){
   background-color: #f5f5f5;
 }
+.status-flex{
+  display: flex;
+  justify-content: space-around;
+}
+.status-flex > div{
+  display: flex;
+  align-items: center;
+}
+.status-flex > div > input[type="checkbox"]{
+  margin: 0 2px;
+  width: 20px;
+  height: 20px;
+  accent-color: green;
+}
+label{
+  font-size: 18px;
+}
+.select{
+  padding:110px 4px ;
+}
 @media screen and (max-width:700px){
   .p-container .wd-40{
     width: 100%;
   }
   .p-container .wd-60{
+    width: 100%;
+  }
+}
+@media  screen and (max-width:430px) {
+  .input-controller{
+    width: 100%;
+  }
+  .cBtn .btn{
+    width: 100%;
+  }
+}
+@media screen and (max-width:286px) {
+  .p-container .wd-40{
     width: 100%;
   }
 }

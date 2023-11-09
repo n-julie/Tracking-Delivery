@@ -7,6 +7,7 @@
 }
 .scroll-y{
   height: 100vh;
+  width: 100%;
   overflow-y: auto;
 }
 .scroll-y::-webkit-scrollbar {
