@@ -69,7 +69,7 @@ include "./class.cart.php";
               <?php
             }else{
               ?>
-            <div class="nvv">
+            <div class="nvv" style="margin-left: 8px;">
               <a href="?ref-dashboard&ref2=userLogin">sign in</a>
             </div>
               <?php
