@@ -33,7 +33,7 @@ if(isset($_GET['edit'])){
 }else
 if(isset($_GET['delete'])){
   $del =$_GET['delete'];
-  $stmi = $conn->query("DELETE  FROM products WHERE id = '$del'") or die($conn->error);
+  $stmi = $db->query("DELETE  FROM products WHERE id = '$del'") or die($db->error);
   if($stmi){
     ?>
     <script>

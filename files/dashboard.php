@@ -13,14 +13,16 @@ include "./class.cart.php";
           </div>
         </div>
         <div class="search">
-          <input type="text" class="js-search-btn">
-          <button>
-            <div class="links">
-              <p class="icons-flex">
-                <span class="ics-flex search-icon"><?php include "./svgs/search.svg" ?></span>
-              </p>
-            </div>
-          </button>
+          <form action="" method="post" class="search">
+            <input type="text" name="search"class="js-search-btn">
+            <button>
+              <div class="links">
+                <p class="icons-flex">
+                  <span class="ics-flex search-icon"><?php include "./svgs/search.svg" ?></span>
+                </p>
+              </div>
+            </button>
+          </form>
         </div>
         <div style="position:relative;">
           <div class="nav_flex">

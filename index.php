@@ -2,6 +2,7 @@
 session_start();
 // echo password_hash('ivan',PASSWORD_DEFAULT);
 // echo password_hash("julie",PASSWORD_DEFAULT);
+//echo password|_hash("shamie",PASSWORD_DEFAULT);
 error_reporting(E_ALL);
 if(isset($_GET['logout'])){
   session_destroy();
