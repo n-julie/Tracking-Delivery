@@ -9,7 +9,9 @@ include "./class.cart.php";
       <div class="d-flex">
         <div>
           <div class="logo">
-            <img src="./files/img/log.jpg" alt="Express Delivery Tracking"/>
+            <a href="?ref2=home">
+              <img src="./files/img/log.jpg" alt="Express Delivery Tracking"/>
+            </a>
           </div>
         </div>
         <div class="search">
@@ -60,7 +62,7 @@ include "./class.cart.php";
                       <p style="padding: 0 4px;"><?=$_SESSION['auth']['email']?></p>
                     </div>
                     <div class="my-orders" style="padding: 5px 0;">
-                      <a href="?ref2=user-orders" style="padding: unset;">My orders</a>
+                      <a href="?ref2=user-orders" style="padding: unset;">Orders&return</a>
                     </div>
                     <div style="padding: 5px 0;">
                       <a href="?logout" style="padding:unset; color:tomato;">Logout</a>
@@ -87,7 +89,6 @@ include "./class.cart.php";
             </p>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@ include "./class.cart.php";
 </div>
 <div class="scroll-y">
   <div>
-    <div class="m-b">
+    <div class="m-b"  style="padding-bottom:100px;">
       <?php
       $nav = isset($_GET['ref2']) ? $_GET['ref2'] : "home";
       $page = "./". $nav . ".php";

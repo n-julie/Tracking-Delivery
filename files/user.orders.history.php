@@ -1,9 +1,11 @@
 <div class="mx-wd auto">
   <div class="scroll-y">
     <div class="orders">
-      <div class="orders-header">
-        <span>Orders</span>
-        <a href="?ref2=user.orders.history">Orders History</a>
+      <div class="card-header">
+        <span>Orders History</span>
+        <a href="?ref2=home" class="icons-flex" style="align-items:center;">
+          <span style="display: flex; width:20px;height:20px;fill:#000;"><?php include "./svgs/reply.svg" ?></span>
+        </a>
       </div>
       <table>
         <thead>
@@ -13,14 +15,12 @@
             <th>Tracking No</th>
             <th>Price</th>
             <th>Date</th>
-            <th>View</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <?php
-          
-          $uEmail=$_SESSION['auth']['email'];
-            $orders = $db->query("SELECT * FROM orders where status = 0 and email ='$uEmail' order by id DESC") or die($db->error);
+            $orders = $db->query("SELECT * FROM orders WHERE status != 0") or die($db->error);
             if($orders->num_rows > 0){
               foreach($orders as $item){
                 ?>
@@ -31,14 +31,24 @@
                   <td><?=number_format($item['total_price'])?></td>
                   <td><?=$item['created_at']?></td>
                   <td>
-                    <a href="?ref2=view-user-order&id=<?=$item['tracking_no']?>">View details</a>
+                    <?php
+                    if($item['status'] == 1){
+                      ?>
+                      <span style="color: green; font-weight:bold;">Delivered</span>
+                      <?php
+                    }else if($item['status'] == 2){
+                      ?>
+                      <span style="color: red; font-weight:bold;">Cancelled..</span>
+                      <?php
+                    }
+                    ?>
                   </td>
-                </tr> 
+                </tr>
                 <?php
               }
             }else{
               ?>
-             <td colspan="6" style="color: tomato; font-size:17px;"> No order found</td>
+                <td colspan="6" style="color: tomato; font-size:17px;">No order found</td>
               <?php
             }
             ?>
