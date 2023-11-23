@@ -26,6 +26,11 @@
   width: 100%;
   position:absolute;
   z-index:unset;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+.slider.actives{
+  opacity: 1;
 }
 .slider > .hgt{
   background-color: aliceblue;

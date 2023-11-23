@@ -16,7 +16,7 @@ if(isset($_POST['update_order_btn'])){
 }
 if(isset($_GET['id'])){
   $tracking_no = $_GET['id'];
-  $uid=$db->query('SELECT user_id FROM orders') or die($db->error);
+  $uid=$db->query("SELECT user_id FROM orders WHERE tracking_no = '$tracking_no'") or die($db->error);
   $getid =mysqli_fetch_array($uid);
   $_SESSION['user_id']=$getid;
   $userId = $_SESSION['user_id']['user_id'];
@@ -35,7 +35,7 @@ if(isset($_GET['id'])){
       <div class="card-header">
         <span>View Order</span>
         <a href="?nav_3=orders" class="icons-flex" style="align-items:center;">
-          <span style="display: flex; width:20px;height:20px;fill:#000;"><?php include "./svgs/reply.svg" ?></span>
+          <span style="display:flex; width:20px;height:20px;fill:#000;"><?php include "./svgs/reply.svg" ?></span>
         </a>
       </div>
       <div class="card-flex">

@@ -88,6 +88,10 @@
   display: flex;
   flex-direction:column;  
 }
+.price{
+  color: red;
+  font-weight: bold;
+}
 .dblock span{
   padding: 5px 0;
 }

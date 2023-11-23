@@ -46,7 +46,7 @@ $total = number_format($_SESSION['total']);
         <div class="ctrl-f">
           <div class="ctrl">
             <label for="">Email:</label>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" value="<?=$_SESSION['auth']['email']?>" readonly placeholder="Email">
           </div>
           <div class="ctrl">
             <div class="input-p">
