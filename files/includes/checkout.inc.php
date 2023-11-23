@@ -10,11 +10,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
   else{
     $fname = mysqli_real_escape_string($db,$_POST['fname']);
     $lname = mysqli_real_escape_string($db,$_POST['lname']);
-    $email = mysqli_real_escape_string($db,$_POST['email']);
+    // $email = mysqli_real_escape_string($db,$_POST['email']);
+    $email = $_SESSION['auth']['email'];
     $num = mysqli_real_escape_string($db,$_POST['num']);
     $address = mysqli_real_escape_string($db,$_POST['address']);
     $payment_mode = mysqli_real_escape_string($db,$_POST['payment_mode']);
-    $tracking_no = rand(1111,9999).substr($num,2);
+    $letters = "abcdefghijklmnopqrstuvwxyz";
+    $tracking_no = rand(1111,9999).substr(str_shuffle($letters),0,4).substr($num,2);
     $user_id = $_SESSION['auth']['id'];
     $total_price = 0;
     $total_price = $_SESSION['total'];
@@ -56,6 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
     $db->query($query) or die($db->error);
     require "./includes/phpMailer.php";
     $db->close();    if($stmt){
+      unset($_SESSION['cart'])
       ?>
       <script>
         window.location.href = "?ref2=thank-you";
