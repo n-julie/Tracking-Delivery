@@ -75,7 +75,7 @@
                                 <img src="./files/uploads/<?=$item['productImage']?>" height="50px" alt="<?=$item['productName']?>">
                                 <?=$item['productName']?>
                               </td>
-                              <td><?=number_format($item['productPrice'])?></td>
+                              <td><?=number_format($item['sellingPrice'])?></td>
                               <td><?=intval($item['orderqty'])?></td>
                             </tr>
                             <?php

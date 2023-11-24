@@ -21,10 +21,10 @@ require_once "components.php";
 
           // $result = $db->query("SELECT * FROM products") or die($db->error);
           foreach($_SESSION['cart'] as $item){
-            cartElement($item['productName'],$item['productPrice'],$item['productDesc'],$item['productImage'],$item['productId'],$item['qty']);
-            $total += intval($item['productPrice'] * $item['qty']);
+            cartElement($item['productName'],$item['sellingPrice'],$item['productDesc'],$item['productImage'],$item['productId'],$item['qty']);
+            $total += intval($item['sellingPrice'] * $item['qty']);
             $_SESSION['total']=$total;
-            $_SESSION['price']=$item['productPrice'];
+            $_SESSION['price']=$item['sellingPrice'];
           }
           // while($row = $result->fetch_assoc()){
           // }

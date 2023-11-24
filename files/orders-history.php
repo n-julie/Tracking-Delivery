@@ -1,4 +1,10 @@
 <?php require "./includes/db.inc.php" ?>
+<?php
+if(isset($_GET['clearAll'])){
+  $clear = $_GET['clearAll'];
+  $sql =$db->query("DELETE FROM orders where status !=0") or die($db->error);
+}
+?>
 <div class="mx-wd auto">
   <div class="scroll-y">
     <div class="orders">
@@ -45,6 +51,18 @@
             ?>
         </tbody>
       </table>
+      <div class="clear-history">
+        <a href="?nav_3=orders-history&clearAll" onclick="clearAll()">Clear All</a>
+      </div>
+          <script>
+            ///clear all orders
+            function clearAll(e){
+              const clearAll = confirm("Are you sure?\nYou want to clear all orders history!");
+              if(clearAll === false){
+                e.preventDefault();
+              }
+            }
+          </script>
     </div>
   </div>
 </div>

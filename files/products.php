@@ -11,7 +11,7 @@ require_once "components.php";
           <?php
           $productSql = getAll('products');
           foreach($productSql as $row){
-            products($row['productImage'],$row['productName'],$row['productPrice'],$row['id']);
+            products($row['productImage'],$row['productName'],$row['sellingPrice'],$row['id']);
             ?>
           <?php }
           ?>

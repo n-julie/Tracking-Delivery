@@ -81,7 +81,6 @@ a.active{
   display: flex;
   margin-right: 3px;
   margin-left: 5px;
-  z-index: 999999;
 }
 .ics-flex{
   width: 20px;

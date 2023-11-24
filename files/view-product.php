@@ -14,7 +14,7 @@ include_once "./class.cart.php";
       "qty" => 1,
       "productDesc" => $row['productDesc'],
       "productImage" => $row['productImage'],
-      "productPrice" => $row['productPrice']
+      "sellingPrice" => $row['sellingPrice']
     );
     $cart->addProduct($product);
     ?>
@@ -41,7 +41,7 @@ include_once "./class.cart.php";
       <div class="wd2">
         <div class="mg">
           <div class="p-name js-productName"><?=$row['productName']?></div>
-          <div class="price">UGX.<?=number_format($row['productPrice'])?></div>
+          <div class="price">UGX.<?=number_format($row['sellingPrice'])?></div>
           <div><?=$row['small_desc']?></div>
         </div>
         <div class="mg">
@@ -82,7 +82,7 @@ include_once "./class.cart.php";
         <div class="mg cart-border">
           <form action="" method="post">
             <div class="price-cart">
-              <span>UGX.<?=number_format($row['productPrice'])?></span>
+              <span>UGX.<?=number_format($row['sellingPrice'])?></span>
               <div class="product-qty">
                 <button class="decrement-btn">-</button>
                 <input type="text" value="1" class="input-qty" disabled>

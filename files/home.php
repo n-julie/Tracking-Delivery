@@ -33,30 +33,34 @@ require_once "./components.php";
       <h1>Trendings</h1>
       <div class="underlined"></div>
     </div>
-    <div class="display-flex">
-      <?php
-      $trending = trending('products');
-      if(mysqli_num_rows($trending) > 0){
-        foreach( $trending as $item){
-          ?>
-          <div class="c-wd">
-            <div class="hgt">
-              <a href="?ref2=view-product&on_id=<?=$item['id']?>" style="text-decoration:none;color:unset;">
-                <div class="profile">
-                  <img src="./files/uploads/<?=$item['productImage']?>" alt="">
-                </div>
-                <div class="cname">
-                <?=$item['productName']?>
-                </div>
-              </a>
+    <div id="product-carousel">
+      <!-- <button id="prevBtn">&lt;</button> -->
+      <div class="display-flex wrap-unset" style="width: 100%; overflow:hidden;">
+        <?php
+        $trending = trending('products');
+        if(mysqli_num_rows($trending) > 0){
+          foreach( $trending as $item){
+            ?>
+            <div class="c-wd trend-slider">
+              <div class="hgt">
+                <a href="?ref2=view-product&on_id=<?=$item['id']?>" style="text-decoration:none;color:unset;">
+                  <div class="profile">
+                    <img src="./files/uploads/<?=$item['productImage']?>" alt="">
+                  </div>
+                  <div class="cname">
+                  <?=$item['productName']?>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-        <?php }
-        }else{
-          echo "No data found!";
-      }
-      ?>
-      </div>
+            <?php }
+          }else{
+            echo "No data found!";
+          }
+          ?>
+        </div>
+        <!-- <button id="nextBtn">&gt;</button> -->
+    </div>
     </div>
   </div>
 </div>

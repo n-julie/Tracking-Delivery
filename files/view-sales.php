@@ -3,7 +3,7 @@
 include "./includes/db.inc.php";
 if(isset($_GET['id'])){
   $tracking_no = $_GET['id'];
-  $uid=$db->query('SELECT user_id FROM orders') or die($db->error);
+  $uid=$db->query("SELECT user_id FROM orders where tracking_no ='$tracking_no'") or die($db->error);
   $getid =mysqli_fetch_array($uid);
   $_SESSION['user_id']=$getid;
   $userId = $_SESSION['user_id']['user_id'];
@@ -73,7 +73,7 @@ if(isset($_GET['id'])){
                         <img src="./files/uploads/<?=$item['productImage']?>" height="50px" alt="<?=$item['productName']?>">
                         <?=$item['productName']?>
                       </td>
-                      <td><?=number_format($item['productPrice'])?></td>
+                      <td><?=number_format($item['sellingPrice'])?></td>
                       <td><?=intval($item['orderqty'])?></td>
                     </tr>
                     <?php
