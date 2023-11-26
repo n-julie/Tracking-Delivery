@@ -87,13 +87,6 @@
                       </tbody>
                     </table>
                     <h4>Total price: <span>UGX.<?=number_format($fetch['total_price'])?></span></h4>
-                    <hr>
-                    <div class="col-md" style="margin-top: 4px;">
-                      <label for="">Payment Mode</label>
-                      <div class="border">
-                        <?=$fetch['payment_mode']?>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
