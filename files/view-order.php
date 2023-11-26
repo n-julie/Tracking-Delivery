@@ -34,7 +34,7 @@ if(isset($_GET['id'])){
     <div class="card">
       <div class="card-header">
         <span>View Order</span>
-        <a href="?nav_3=orders" class="icons-flex" style="align-items:center;">
+        <a href="?nav_3=orders-history" class="icons-flex" style="align-items:center;">
           <span style="display:flex; width:20px;height:20px;fill:#000;"><?php include "./svgs/reply.svg" ?></span>
         </a>
       </div>
@@ -86,7 +86,7 @@ if(isset($_GET['id'])){
                         <img src="./files/uploads/<?=$item['productImage']?>" height="50px" alt="<?=$item['productName']?>">
                         <?=$item['productName']?>
                       </td>
-                      <td><?=number_format($item['productPrice'])?></td>
+                      <td><?=number_format($item['sellingPrice'])?></td>
                       <td><?=intval($item['orderqty'])?></td>
                     </tr>
                     <?php

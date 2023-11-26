@@ -50,3 +50,24 @@
   max-width: 100%;
   max-height: 100%;
 }
+.wrap-unset{
+  flex-wrap: unset;
+}
+#product-carousel{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+/* #prevBtn,#nextBtn{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  width: 50px;
+  height: 50px;
+}
+#prevBtn{
+  left: 0;
+}
+#nextBtn{
+  right: 0;
+} */

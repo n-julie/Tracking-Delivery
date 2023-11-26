@@ -25,13 +25,12 @@ decrementBtn.addEventListener('click', (e) => {
 });
 
 //delete function
-function deleteAlert(){
+function deleteAlert(event){
   const  alert = confirm("Are you sure?\nYou want to delete this product!");
   if(alert === false){
     event.preventDefault();
   }
 }
-
 $(document).ready(function(){
   $('.addToCartBtn').click(function(e){
     e.preventDefault();

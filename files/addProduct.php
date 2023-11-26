@@ -56,7 +56,7 @@ require_once "./includes/addProduct.inc.php";
           <div class="display-flex">
             <div class="input-controller">
               <label for="">Quantity:</label>
-              <input type="number" name="qty" value="">
+              <input type="number" name="qty" value="<?=$qty?>">
             </div>
             <div class="input-controller">
               <label for="">Product image:</label>

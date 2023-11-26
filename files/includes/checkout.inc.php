@@ -49,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
       $values[] = sprintf('(%s,%s,%s,%s)',
       $orderId,
       $item['productId'],
-      $item['productPrice'],
+      $item['sellingPrice'],
       $item['qty']
     );
     }
@@ -75,7 +75,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
   // foreach($_SESSION['cart'] as $item){
   //   $product_id = $item['productId'];
   //   $qty = $item['qty'];
-  //   $price = $item['productPrice'];
+  //   $price = $item['sellingPrice'];
   // }
 
   // $query = "INSERT INTO orders_items(order_id,product_id,price,qty) VALUES(LAST_INSERT_ID(),?,?,?)";
@@ -89,7 +89,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
   // $data = mysqli_fetch_assoc($product_query);
   // $c_qty = $data['qty'];
   // $n_qty = $c_qty - $qty;
-  // $update_query = $db->query("UPDATE products SET qty='$new_qty' WHERE id = '$product_id'");
+  // $update_query = $db->query("UPDATE products SET qty='$n_qty' WHERE id = '$product_id'");
 
 
 

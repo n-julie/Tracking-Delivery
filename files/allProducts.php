@@ -17,6 +17,7 @@
                 <th>price</th>
                 <th>Image</th>
                 <th>Description</th>
+                <th>Qty</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -27,11 +28,12 @@
                 <tr>
                   <td><?=$row['id']?></td>
                   <td><?=$row['productName']?></td>
-                  <td>Sh.<?=$row['productPrice']?></td>
+                  <td>Sh.<?=$row['sellingPrice']?></td>
                   <td>
                     <img src="./files/uploads/<?=$row['productImage']?>" height="50px" alt="">
                   </td>
                   <td><?=$row['small_desc']?></td>
+                  <td><?=$row['qty']?></td>
                   <td>
                     <div class="actions">
                       <a href="?nav_3=addProduct&edit=<?=$row['id']?>" class="icons-flex">

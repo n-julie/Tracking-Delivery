@@ -23,7 +23,7 @@ class Cart extends DB {
           "qty" => $item['qty'] + $product['qty'],
           "productDesc" => $item['productDesc'],
           "productImage" => $item['productImage'],
-          "productPrice" => $item['productPrice']
+          "sellingPrice" => $item['sellingPrice']
         );
         $_SESSION['cart'] = $cartArray;
         break; //break the loop right here.
@@ -40,7 +40,7 @@ class Cart extends DB {
         "qty" => $product['qty'], //notice how we used $product instead of $item? It's because we want to accept the quantity submitted by the user
         "productDesc" => $product['productDesc'],
         "productImage" => $product['productImage'],
-        "productPrice" => $product['productPrice']
+        "sellingPrice" => $product['sellingPrice']
       );
       $_SESSION['cart'] = $cartArray;
     }
