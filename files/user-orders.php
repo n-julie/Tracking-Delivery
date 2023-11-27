@@ -23,6 +23,7 @@
             $orders = $db->query("SELECT * FROM orders where status = 0 and email ='$uEmail' order by id DESC") or die($db->error);
             if($orders->num_rows > 0){
               foreach($orders as $item){
+                $_SESSION['trackNo'] = $item['tracking_no'];
                 ?>
                 <tr>
                   <td><?=$item['id']?></td>

@@ -2,19 +2,15 @@
 // include "./includes/db.inc.php";
 
 if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
-  if(strlen($_POST['fname']) < 1) $error[] = "First name is required!";
-  else if(strlen($_POST['lname']) < 1) $error[] = "Last name is required!";
-  else if (strlen($_POST['email']) < 1) $error[] = "Email is required";
-  else if(strlen($_POST['num']) < 1) $error[] = "Your phone number is required";
+  if(strlen($_POST['num']) < 1) $error[] = "Your phone number is required";
   else if(strlen($_POST['address']) < 1) $error[] = "Please enter your address!";
   else{
-    $fname = mysqli_real_escape_string($db,$_POST['fname']);
-    $lname = mysqli_real_escape_string($db,$_POST['lname']);
+    $fname =$email = $_SESSION['auth']['lname'];
+    $lname = $_SESSION['auth']['fname'];
     // $email = mysqli_real_escape_string($db,$_POST['email']);
     $email = $_SESSION['auth']['email'];
     $num = mysqli_real_escape_string($db,$_POST['num']);
     $address = mysqli_real_escape_string($db,$_POST['address']);
-    $payment_mode = mysqli_real_escape_string($db,$_POST['payment_mode']);
     $letters = "abcdefghijklmnopqrstuvwxyz";
     $tracking_no = rand(1111,9999).substr(str_shuffle($letters),0,4).substr($num,2);
     $user_id = $_SESSION['auth']['id'];
@@ -22,9 +18,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
     $total_price = $_SESSION['total'];
 
     //Prepare order sql statement
-    $q = "INSERT INTO orders(tracking_no,user_id,fname,lname,email,phone,address,total_price,payment_mode) VALUES(?,?,?,?,?,?,?,?,?)";
+    $q = "INSERT INTO orders(tracking_no,user_id,fname,lname,email,phone,address,total_price) VALUES(?,?,?,?,?,?,?,?)";
     $stmt = $db->prepare($q) or die($db->error);
-    $stmt->bind_param("sisssssis",$tracking_no,$user_id,$fname,$lname,$email,$num,$address,$total_price,$payment_mode);
+    $stmt->bind_param("sisssssi",$tracking_no,$user_id,$fname,$lname,$email,$num,$address,$total_price);
     $stmt->execute();
     
     $orderId =$db->query('SELECT LAST_INSERT_ID() AS order_id')->fetch_assoc()['order_id'];//Get the last insirted id method 1
@@ -37,7 +33,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['checkout'])){
       'phone' => $num,
       'address' => $address,
       'total_price' => $total_price,
-      'payment_mode' => $payment_mode,
       'order_id' => $orderId,
     );
     $_SESSION['auth_user'] = $order_data;

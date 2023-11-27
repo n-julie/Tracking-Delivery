@@ -20,7 +20,8 @@
         </thead>
         <tbody>
           <?php
-            $orders = $db->query("SELECT * FROM orders WHERE status != 0") or die($db->error);
+          $orderEmail = $_SESSION['auth']['email'];
+            $orders = $db->query("SELECT * FROM orders WHERE status != 0 AND email ='$orderEmail'") or die($db->error);
             if($orders->num_rows > 0){
               foreach($orders as $item){
                 ?>

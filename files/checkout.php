@@ -32,39 +32,15 @@ $total = number_format($_SESSION['total']);
           </div>
         </div>
         <div class="ctrl-f">
-          <div class="ctrl">
-            <label for="">First Name:</label>
-            <input type="text" name="fname" placeholder="Name">
-          </div>
-          <div class="ctrl">
-            <div class="input-p">
-              <label for="">Last Name:</label>
-              <input type="text" name="lname" placeholder="Last Name">
-            </div>
-          </div>
-        </div>
-        <div class="ctrl-f">
-          <div class="ctrl">
-            <label for="">Email:</label>
-            <input type="email" name="email" value="<?=$_SESSION['auth']['email']?>" readonly placeholder="Email">
+          <div class="ctrl text-area">
+            <label for="">Address:</label>
+            <textarea name="address"  rows="3" placeholder="Enter your address"></textarea>
           </div>
           <div class="ctrl">
             <div class="input-p">
               <label for="">phone:</label>
-              <input type="tel" name="num">
+              <input type="tel" name="num" placeholder="(+256)">
             </div>
-          </div>
-        </div>
-        <div class="ctrl-f">
-        <div class="ctrl text-area">
-          <label for="">Address:</label>
-          <textarea name="address"  rows="3" placeholder="Enter your address"></textarea>
-        </div>
-        <div class="ctrl">
-          <div class="input-p">
-            <label for="">Pin code:</label>
-            <input type="text" name="pin" value="1234" disabled>
-            <input type="hidden" name="payment_mode" value="CASH ON DELIVERY">
           </div>
         </div>
         <div class="place">
